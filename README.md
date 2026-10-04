@@ -28,5 +28,14 @@ restore. Uninstalling without a backup loses all stock, sales and photos.
 apksigner verify --print-certs convmarket-<version>.apk
 ```
 
-The expected SHA-256 of the signing certificate will be published here once a
-release signing key is in use.
+Builds up to and including **1.2** are signed with an Android **debug** key:
+
+```
+CN=Android Debug, O=Android, C=US
+SHA-256  e6:ef:a8:84:2d:ae:66:42:e1:95:63:80:21:19:cd:a8:
+         78:8e:bc:53:1e:57:95:7c:4b:6c:3e:14:0a:33:08:a3
+```
+
+That key will be replaced by a proper release key. When it is, the first build
+signed with the new one **cannot install over an older copy** — follow the
+"Updating in place" steps above: back up, uninstall, install, restore.

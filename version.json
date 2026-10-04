@@ -3,6 +3,9 @@
   "versionCode": 3,
   "versionName": "1.2",
   "releasedAt": "2026-10-04",
-  "pageUrl": "https://github.com/KevinPhomm/convmarket-releases/releases/latest",
+  "pageUrl": "https://github.com/KevinPhomm/convmarket-releases/releases/tag/v1.2",
+  "apkUrl": "https://github.com/KevinPhomm/convmarket-releases/releases/download/v1.2/convmarket-1.2.apk",
+  "apkSizeBytes": 8175835,
+  "apkSha256": "84542c2c06e92c251333b58a1c24f92c49da2f6b1d9592f20b36b81980c44660",
   "minSdk": 26
 }

@@ -1,0 +1,3 @@
+# APKs are attached to Releases, never committed: git would keep every one of
+# them forever, and they are several megabytes each.
+*.apk
