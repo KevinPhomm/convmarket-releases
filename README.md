@@ -28,14 +28,16 @@ restore. Uninstalling without a backup loses all stock, sales and photos.
 apksigner verify --print-certs convmarket-<version>.apk
 ```
 
-Builds up to and including **1.2** are signed with an Android **debug** key:
+All builds from **1.2** onward are signed with the Conv'Market release key:
 
 ```
-CN=Android Debug, O=Android, C=US
-SHA-256  e6:ef:a8:84:2d:ae:66:42:e1:95:63:80:21:19:cd:a8:
-         78:8e:bc:53:1e:57:95:7c:4b:6c:3e:14:0a:33:08:a3
+CN=ConvMarket, O=ConvMarket
+RSA 4096
+SHA-256  56:16:93:0b:dc:dc:24:93:57:30:b2:30:32:ff:e4:fa:
+         e0:1e:d7:39:eb:86:9c:5e:d1:38:b4:ae:65:f9:68:92
 ```
 
-That key will be replaced by a proper release key. When it is, the first build
-signed with the new one **cannot install over an older copy** — follow the
-"Updating in place" steps above: back up, uninstall, install, restore.
+If `apksigner` reports any other certificate, the file is not a build from here.
+
+No earlier build was ever published, so nothing on a phone was signed with a
+different key and no uninstall should ever be needed for an in-place update.
